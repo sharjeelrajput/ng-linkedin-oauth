@@ -34,9 +34,5 @@ It really couldn't be simpler:
     </div>
 
 
-Example usage is included in:
- - `examples/app.js` for your routing.
- - `examples/login.html` for your login page.
- - `examples/authorised.html` for an 'internal' page making a request to the LinkedIn API for details.
-
-Certain bits will need modifying to your requirements, but they should be easy and obvious. If they're not, then give me a shout and I'll endeavour to get back to you.
+#### Help
+If you need any help getting this to work then give me a shout and I'll endeavour to get back to you asap. I've been there. I know the frustration!

@@ -1,4 +1,4 @@
-# AngularJS LinkedIn Authentication
+# Simple AngularJS LinkedIn Authentication Controller
 
 ## Preamble
 Spent far too long looking for 'out of the box' solutions. They either don't work or are bloated as hell, so I created a nice simple controller for authenticating your AngularJS app with LinkedIn.
@@ -16,5 +16,7 @@ Example usage is included in:
  - `app.js` for your routing.
  - `login.html` for your login page.
  - `authorised.html` for an 'internal' page making a request to the LinkedIn API for details.
+
+I'll try to get a full working example that you can checkout and use up asap.
 
 Certain bits will need modifying to your requirments, but they should be easy and obvious. If they're not, then give me a shout and I'll endeavour to get back to you.

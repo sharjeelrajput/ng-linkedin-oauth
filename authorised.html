@@ -1,4 +1,4 @@
-<div ng-controller="LinkedinLogin" data-ng-init="getData()">
+<div ng-controller="LinkedinLogin" data-ng-init="getData(['first-name', 'last-name', 'headline', 'location', 'summary', 'picture-url'])">
   <h1>Authorised</h1>
   <ul>
     <li>First name: {{ data.firstName }}</li>
@@ -7,6 +7,5 @@
     <li>Location: {{ data.location.name }}</li>
     <li>Summary: {{ data.summary }}</li>
     <li>Picture URL: {{ data.pictureUrl }}</li>
-    <li>Email address: {{ data.email }}</li>
   </ul>
 </div>

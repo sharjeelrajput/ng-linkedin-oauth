@@ -1,16 +1,17 @@
 angular.module('MyApp.controllers', [])
 
 .controller('LinkedinCtrl', function($scope, $http, $location) {
-  
+
   $scope.login = function() {
-    
+
+    // Ideally these should be stored as environment variables for security reasons
     var clientId = 'dniby53njwcere';                                  // LinkedIn application client ID
     var clientSecret = 'OeKTBZDDcGVuPY9o';                            // LinkedIn application client secret
     var redirectUri = 'http://localhost:3000';                        // Authorised application URL
     var state = 'kBTXHWAprV';                                         // Any random string
     var profileData = 'r_fullprofile%20r_emailaddress%20w_share';     // The profile data you want to be available
     var redirectPath = '/app/posts';                                  // Path to redirect to after login
-    
+
     var req = {
       method: 'post',
       url: 'https://www.linkedin.com/uas/oauth2/accessToken',
@@ -25,7 +26,7 @@ angular.module('MyApp.controllers', [])
         client_secret: clientSecret
       }
     };
-    
+
     var ref = window.open('https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=' + clientId + '&redirect_uri=' + redirectUrl + '&state=' + state + '&scope=' + profileData, '_blank', 'location=no');
     ref.addEventListener('loadstart', function(event) {
       if ((event.url).startsWith(redirectUri)) {
@@ -45,7 +46,7 @@ angular.module('MyApp.controllers', [])
       }
     });
   }
-  
+
   if (typeof String.prototype.startsWith != 'function') {
     String.prototype.startsWith = function (str) {
       return this.indexOf(str) == 0;
@@ -54,9 +55,9 @@ angular.module('MyApp.controllers', [])
 })
 
 $scope.getData = function(fields) {
-  
+
   fieldsUrl = fields.join(',');
-  
+
   var req = {
     method: 'get',
     url: 'https://api.linkedin.com/v1/people/~:' + fieldsUrl +'?format=json',
@@ -64,7 +65,7 @@ $scope.getData = function(fields) {
       'Authorization': 'Bearer ' + accessToken
     }
   };
-  
+
   $http(req)
   .success(function(data) {
     $scope.data = data;

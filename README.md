@@ -38,4 +38,4 @@ It really couldn't be simpler:
 If you need any help getting this to work then give me a shout and I'll endeavour to get back to you asap. I've been there. I know the frustration!
 
 #### Props
- - [https://github.com/nraboy](Nic Raboy) for setting me on the right path.
+ - [Nic Raboy (@nraboy)](https://github.com/nraboy) for setting me on the right path.

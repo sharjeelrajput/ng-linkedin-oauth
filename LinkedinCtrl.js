@@ -5,8 +5,8 @@ angular.module('MyApp.controllers', [])
   $scope.login = function() {
 
     // Ideally these should be stored as environment variables for security reasons
-    var clientId = 'dniby53njwcere';                                  // LinkedIn application client ID
-    var clientSecret = 'OeKTBZDDcGVuPY9o';                            // LinkedIn application client secret
+    var clientId = 'APP_CLIENT_ID';                                  // LinkedIn application client ID
+    var clientSecret = 'APP_CLIENT_SECRET';                            // LinkedIn application client secret
     var redirectUri = 'http://localhost:3000';                        // Authorised application URL
     var state = 'kBTXHWAprV';                                         // Any random string
     var profileData = 'r_fullprofile%20r_emailaddress%20w_share';     // The profile data you want to be available
